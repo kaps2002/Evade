@@ -6,11 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/results.css">
     <link rel="stylesheet" href="../static/styles/common.css">
-    <title>evade-results</title>
+    <title>Evade-results</title>
+    <link rel="icon" href="../static/images/evadelogo.png" type="image/icon"/>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
-    <p>results</p>
-    <img class="bl" src="../static/images/bl.png" alt="" srcset="">
-    <img class="tr" src="../static/images/tr.png" alt="" srcset="">
+    <div class="nav"> 
+        <img class="logo" src="../static/images/evadelogo.png">
+        <p class="headname" onclick="window.location.href='/'" style="cursor: pointer;">Evade</p>
+    </div>
+    <div>
+       <div style="display: flex; justify-content: center; top: 0;"><p style="position: absolute; top: 5rem; color: #5E17EB;">THERE ARE <span style="color: red;">{{num}}</span> TOWERS IN 3KM RADIUS FROM YOUR LOCATION</p></div>
+    <div>
+        <div>
+            <img class="bl" src="../static/images/bl.png" alt="" srcset="">
+        <img class="tr" src="../static/images/tr.png" alt="" srcset="">
+        </div>
+        <center>
+            <div class="mapcont" id="map">
+                <!-- <p>map would be here</p> -->
+            </div>
+        </center>
+    </div>
+    <center>
+        <p style="color: #5E17EB">YOU ARE AT <span style="color: {{clr}}">{{send}}</span> RISK!</p>
+    <button onclick="window.location.href='/measures'">learn how to safeguard yourself</button>
+    </center>
+    <script type="text/javascript">
+        var url = window.location.href.split("/").at(-1);
+        var lng=url.split(",")[1]
+        var lat=url.split(",")[0]
+
+        // The first parameter are the coordinates of the center of the map
+        // The second parameter is the zoom level
+        var map = L.map('map').setView([lat, lng], 15);
+        
+        // {s}, {z}, {x} and {y} are placeholders for map tiles
+        // {x} and {y} are the x/y of where you are on the map
+        // {z} is the zoom level
+        // {s} is the subdomain of cartodb
+          var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+        });
+        
+        // Now add the layer onto the map
+        map.addLayer(layer);
+        // console.log({{lmao}})
+        L.marker([lat,lng]).addTo(map)
+        console.log(lat, lng)
+      </script>
 </body>
 </html>
