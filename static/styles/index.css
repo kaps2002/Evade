@@ -1,3 +1,6 @@
+.nav{
+    display: flex;
+}
 .curveimg{
     float: right;
     height: 100vh;
@@ -5,4 +8,50 @@
     position: fixed;
     top: 0;
     right: 0;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.headname{
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    color: #5E17EB;
+    margin-left: 5px;
+    margin-top: 40px;
+}
+.capital{
+    margin-top: 120px;
+    margin-left: 15px;
+    font-size: 50px;
+    color: #5E17EB;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    line-height: 43px;
+}
+.hazard{
+    color: crimson;
+    font-family: 'Oswald', sans-serif;
+}
+.risk{
+    font-family: 'Oswald', sans-serif;
+    color: #5E17EB;
+    margin-left: 20px;
+    margin-top: -30px;
+    font-size: 35px;
+}
+button{
+    margin-left: 3rem;
+    height:45px;
+    width:120px;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: black;
+    border-style: groove;
+    background-color: #5E17EB;
+    color: azure;
+    font-size: medium;
 }
