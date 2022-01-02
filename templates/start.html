@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/start.css">
     <link rel="stylesheet" href="../static/styles/common.css">
-    <title>evade-start</title>
+    <title>Evade-Start</title>
+    <link rel="icon" href="../static/images/evadelogo.png" type="image/icon type">
 </head>
 <body>
-    <p>start</p>
+    <div class="nav"> 
+        <img class="logo" src="../static/images/evadelogo.png">
+        <p class="headname" onclick="window.location.href='/'" style="cursor: pointer;">Evade</p>
+    </div>
+    <p class="started">Get Started</p>
+    <div class="location">
+        <input type="text" required placeholder="Enter the Location">
+        <button onclick="window.location.href='/results'" style="cursor: pointer;">GO</button>
+        <p class="or">or</p>
+        <button onclick="window.location.href='/results'" style="cursor: pointer;" class="gps">Use GPS</button>
+    </div>
+
     <img class="bl" src="../static/images/bl.png" alt="" srcset="">
     <img class="tr" src="../static/images/tr.png" alt="" srcset="">
-
 </body>
 </html>
