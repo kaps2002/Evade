@@ -1,0 +1,8 @@
+.curveimg{
+    float: right;
+    height: 100vh;
+    /* width: 2rem; */
+    position: fixed;
+    top: 0;
+    right: 0;
+}
