@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+}
+.curveimg{
+    float: right;
+    height: 100vh;
+    /* width: 2rem; */
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.headname{
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    color: #5E17EB;
+    margin-left: 5px;
+    margin-top: 40px;
+}
