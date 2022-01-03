@@ -37,6 +37,7 @@ h1{
 }
 .about{
     background: rgba(170, 170, 170, 0.384);
+    border-radius: 20px;
     margin:-2% 16% 0 16%;
     padding: 1px 10px 10px 10px;
 }
@@ -93,4 +94,10 @@ h1{
 .photo:hover{
     width: 30px;
     height:30px;
+}
+
+
+p{
+    font-family:'Oswald', sans-serif;
+    font-size: 1.4rem;
 }
