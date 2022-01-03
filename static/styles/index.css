@@ -5,9 +5,10 @@
     float: right;
     height: 100vh;
     /* width: 2rem; */
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
 }
 .logo{
     height: 80px;
@@ -43,7 +44,7 @@
     margin-top: -30px;
     font-size: 35px;
 }
-button{
+/* button{
     margin-left: 18%;
     height:55px;
     width:150px;
@@ -54,4 +55,4 @@ button{
     background-color: #5E17EB;
     color: azure;
     font-size: large;
-}
+} */

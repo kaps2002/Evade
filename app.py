@@ -67,7 +67,13 @@ def curloc():
         send="LOW"
         clr="green"
     
+
     return redirect(f"/results/{lat},{lng}", code=302)
+
+
+@app.route('/red')
+def red():
+    return redirect('/start')
 
 @app.route('/read')
 def read():

@@ -47,16 +47,19 @@ input{
 button{
     background-color: #5E17EB;
 color: aliceblue;
+padding-right: 15px;
+padding-left: 15px;
     /* height: 26px; */
     border-radius: 5px;
-    border-color: black;
+    border-color: #5E17EB;
     border-width: 2px;
 }
 .or{
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 100px;
     color: #5E17EB;
     font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
 }
 .gps{
     margin-top: 2px;
