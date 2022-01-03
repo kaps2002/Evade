@@ -41,12 +41,15 @@ def about():
 @app.route('/geolol/<city>')
 def geolol(city):
     print(city)
-    loc = Nominatim(user_agent="GetLoc")
-    getLoc = loc.geocode(str(city))
-    print(getLoc.address)
-    print("Latitude = ", getLoc.latitude, "\n")
-    print("Longitude = ", getLoc.longitude)
-    return redirect(f"/results/{getLoc.latitude},{getLoc.longitude}", code=302)
+    try:
+        loc = Nominatim(user_agent="GetLoc")
+        getLoc = loc.geocode(str(city))
+        print(getLoc.address)
+        print("Latitude = ", getLoc.latitude, "\n")
+        print("Longitude = ", getLoc.longitude)
+        return redirect(f"/results/{getLoc.latitude},{getLoc.longitude}", code=302)
+    except:
+        return render_template('404.html')
     # return render_template('geo.html', lat=getLoc.latitude,lng= getLoc.longitude )
 
 @app.route('/gps')
