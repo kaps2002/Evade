@@ -1,0 +1,94 @@
+.bl{
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    }
+    
+.tr{
+        height: 40vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+}
+.nav{
+    display: flex;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.headname{
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    color: #5E17EB;
+    margin-left: 5px;
+    margin-top: 40px;
+}
+h1{
+    color: #5E17EB;
+    margin-left: 40%;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about{
+    background: rgba(170, 170, 170, 0.384);
+    margin:-2% 16% 0 16%;
+    padding: 1px 10px 10px 10px;
+}
+.team{
+    font-size: 50px;
+    color: #5E17EB;
+    text-align: center;
+    margin-top: 10%;
+    margin-left:55px ;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.members{
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 5px 0 40px 0;
+}
+.flexs{
+    display: flex;
+}
+.card{
+    margin-top: 5px;
+    margin-left: 29%;
+    margin-right: -15%;
+    border: 2px black groove;
+    border-radius: 8px;
+    box-shadow: 7px 7px 7px 5px rgba(173, 173, 173, 0.753);
+    transition: 0.2s;
+}
+.container{
+    color: black;
+    line-height: 12px; 
+}
+.tpic{
+    border-radius: 6px;
+    width: 180px;
+    height: 180px;
+}
+.name,.intro{
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 8px 9px 8px 5px rgb(130, 130, 130);
+}
+.contact{
+    word-spacing: 10px;
+    margin-left: 20px;
+    padding-bottom: 6px;
+}
+.photo{
+    transition: width 0.4s,height 0.4s;
+}
+.photo:hover{
+    width: 30px;
+    height:30px;
+}
