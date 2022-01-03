@@ -16,10 +16,10 @@
     </div>
     <p class="started">Get Started</p>
     <div class="location">
-        <input type="text" required placeholder="Enter the Location">
-        <button onclick="window.location.href='/results'" style="cursor: pointer;">GO</button>
+        <form method="POST"><input type="text" required placeholder="Enter the Location" id="lol" ></form>
+        <button onclick="window.location.href='/geolol/'+document.getElementById('lol').value" style="cursor: pointer;">GO</button>
         <p class="or">or</p>
-        <button onclick="window.location.href='/results'" style="cursor: pointer;" class="gps">Use GPS</button>
+        <button onclick="window.location.href='/gps'" style="cursor: pointer;" class="gps">Use GPS</button>
     </div>
 
     <img class="bl" src="../static/images/bl.png" alt="" srcset="">

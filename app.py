@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from geopy.geocoders import Nominatim
 import pandas as pd
 import geocoder
@@ -20,7 +20,7 @@ def results(lat, lng):
     df = pd.read_csv('static/404.csv')
     a = len(df[(float(lat)-0.027 <= df['lat']) & (df['lat'] <= float(lat)+0.027) & (float(lng)-0.025 <= df['lon']) & (df['lon'] <= float(lng)+0.025)])
     send="MEDIUM"
-    clr="#5E17EB"
+    clr="#ff8c00"
     if a>500:
         send="HIGH"
         clr="red"
@@ -38,20 +38,36 @@ def measures():
 def about():
     return render_template('about.html')
 
-@app.route('/geolol')
-def geolol():
+@app.route('/geolol/<city>')
+def geolol(city):
+    print(city)
     loc = Nominatim(user_agent="GetLoc")
-    getLoc = loc.geocode("Andheri Mumbai")
+    getLoc = loc.geocode(str(city))
     print(getLoc.address)
     print("Latitude = ", getLoc.latitude, "\n")
     print("Longitude = ", getLoc.longitude)
-    return render_template('geo.html', lat=getLoc.latitude,lng= getLoc.longitude )
+    return redirect(f"/results/{getLoc.latitude},{getLoc.longitude}", code=302)
+    # return render_template('geo.html', lat=getLoc.latitude,lng= getLoc.longitude )
 
-@app.route('/curloc')
+@app.route('/gps')
 def curloc():
     g = geocoder.ip('me')
     print(g.latlng)
-    return render_template('geo.html', lat=g.latlng[0],lng= g.latlng[1] )
+    lat = g.latlng[0]
+    lng = g.latlng[1]
+    # return lat,lng
+    df = pd.read_csv('static/404.csv')
+    a = len(df[(float(lat)-0.027 <= df['lat']) & (df['lat'] <= float(lat)+0.027) & (float(lng)-0.025 <= df['lon']) & (df['lon'] <= float(lng)+0.025)])
+    send="MEDIUM"
+    clr="#5E17EB"
+    if a>500:
+        send="HIGH"
+        clr="red"
+    elif a<200:
+        send="LOW"
+        clr="green"
+    
+    return redirect(f"/results/{lat},{lng}", code=302)
 
 @app.route('/read')
 def read():
