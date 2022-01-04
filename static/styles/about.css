@@ -30,7 +30,7 @@
 }
 h1{
     color: #5E17EB;
-    margin-left: 40%;
+    /* margin-left: 40%; */
     font-size: 40px;
     font-weight: bolder;
     font-family:'Oswald', sans-serif;
@@ -38,15 +38,17 @@ h1{
 .about{
     background: rgba(170, 170, 170, 0.384);
     border-radius: 20px;
-    margin:-2% 16% 0 16%;
+    /* margin:-2% 16% 0 16%; */
+    width: 80vw;
     padding: 1px 10px 10px 10px;
+    text-align: justify;
 }
 .team{
     font-size: 50px;
     color: #5E17EB;
     text-align: center;
     margin-top: 10%;
-    margin-left:55px ;
+    /* margin-left:55px ; */
     font-weight: bold;
     font-family:'Oswald', sans-serif;
 }
@@ -55,17 +57,13 @@ h1{
     padding: 5px 0 40px 0;
 }
 .flexs{
+    width: vw;
+        justify-content: space-around;
     display: flex;
+    flex-direction: row;
 }
-.card{
-    margin-top: 5px;
-    margin-left: 29%;
-    margin-right: -15%;
-    border: 2px black groove;
-    border-radius: 8px;
-    box-shadow: 7px 7px 7px 5px rgba(173, 173, 173, 0.753);
-    transition: 0.2s;
-}
+
+
 .container{
     color: black;
     line-height: 12px; 
@@ -100,4 +98,40 @@ h1{
 p{
     font-family:'Oswald', sans-serif;
     font-size: 1.4rem;
+}
+
+@media screen and (max-width: 480px) {
+    .bl{
+        visibility: hidden;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    }
+    
+    .tr{
+        visibility: hidden;
+        height: 40vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .flexs{
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card{
+        margin-top: 20px;
+        /* margin-left: 29%; */
+        /* margin-right: -15%; */
+        
+        border: 2px black groove;
+        border-radius: 8px;
+        box-shadow: 7px 7px 7px 5px rgba(173, 173, 173, 0.753);
+        transition: 0.2s;
+    }
 }

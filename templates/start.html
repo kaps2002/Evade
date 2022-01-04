@@ -14,14 +14,18 @@
         <img class="logo" src="../static/images/evadelogo.png">
         <p class="headname" onclick="window.location.href='/'" style="cursor: pointer;">Evade</p>
     </div>
-    <p class="started">Get Started</p>
-    <div class="location">
-        <div style="display: flex;">
-            <input type="text" required placeholder="Enter the Location" id="lol" >
-            <button onclick="window.location.href='/geolol/'+document.getElementById('lol').value" style="cursor: pointer; margin-left: 10px;" >GO</button></div>
-        <p class="or">or</p>
-        <button onclick="window.location.href='/gps'" style="cursor: pointer;" class="gps">Use GPS</button>
-    </div>
+   <centeR> <p class="started">Get Started</p></centeR>
+    <center>
+        <div class="location">
+            <center>
+                <div style="display: flex; justify-content: center;">
+                    <input type="text" required placeholder="Enter the Location" id="lol" >
+                    <button onclick="window.location.href='/geolol/'+document.getElementById('lol').value" style="cursor: pointer; margin-left: 10px;" >GO</button></div>
+            </center>
+            <p class="or">or</p>
+            <button onclick="window.location.href='/gps'" style="cursor: pointer;" class="gps">Use GPS</button>
+        </div>
+    </center>
 
     <img class="bl" src="../static/images/bl.png" alt="" srcset="">
     <img class="tr" src="../static/images/tr.png" alt="" srcset="">

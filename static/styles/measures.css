@@ -46,3 +46,13 @@ h1{
     font-weight: 400;
     
 }
+
+@media screen and (max-width: 480px) {
+    .hehe{
+        font-size: 1.1rem;
+        color: #5E17EB;
+        font-family:'Oswald', sans-serif ;
+        text-align: justify;
+        font-weight: 400;
+    }
+}
